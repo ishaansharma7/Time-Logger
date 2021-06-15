@@ -1,11 +1,5 @@
 from functools import wraps
 
-'''In your python script write the following line to import this decorator (assuming both files are in same directory)
-
-from time_logger import time_logger
-
-'''
-
 
 def time_logger(location='generic-logs'):
     
