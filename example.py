@@ -1,4 +1,4 @@
-from time_logger import time_logger
+from time_logger import time_logger     # import time_logger
 
 import time
 
