@@ -12,7 +12,7 @@ def say_hi():       # name of log file will be say_hi
 
 @time_logger(location='example-location')   # create a location named as example-location if not already present
 def say_hello():                            # name of log file will be say_hello
-    time.sleep(2)
+    time.sleep(1)
     print("Hello")
 
 say_hi()
@@ -33,7 +33,7 @@ class Employee:
     
     @time_logger(location='Employee')   # create a location named as Employee if not already present
     def print_age(self):                # name of log file will be print_age
-        time.sleep(1)
+        time.sleep(3)
         print(self.age)
 
 obj = Employee('Isaac', 21)
