@@ -7,4 +7,4 @@ Make sure time_logger and your script are on same level or else do appropriate c
 
 ### `from time_logger import time_logger`
 
-### Check example.py for usage
+### ⚠️Check example.py for usage⚠️
