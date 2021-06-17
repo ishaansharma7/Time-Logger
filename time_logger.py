@@ -1,7 +1,7 @@
 from functools import wraps
-from datetime import datetime
 import os
 import logging
+from datetime import datetime
 
 def time_logger(location='generic-logs'):
     
