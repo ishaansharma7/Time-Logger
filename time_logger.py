@@ -4,7 +4,7 @@ from functools import wraps
 def time_logger(location='generic-logs'):
     
     def my_timer(orig_func):
-        import time
+
         from datetime import datetime
         import logging
         import os
@@ -15,13 +15,13 @@ def time_logger(location='generic-logs'):
         
         @wraps(orig_func)
         def wrapper(*args, **kwargs):
+            
             logging.basicConfig(filename=f'{final_location}/{orig_func.__name__}.log', level=logging.INFO)
-            t1 = time.time()
             starting_time = datetime.now()
             result = orig_func(*args, **kwargs)
-            t2 = time.time() - t1
             ended_time = datetime.now()
-            logging.info(f'{orig_func.__name__} ran in {round(t2, 2)} seconds on {starting_time}, ended at {ended_time}')
+            t2 = ended_time - starting_time
+            logging.info(f'{orig_func.__name__} ran in {t2} seconds on {starting_time}, ended at {ended_time}')
             for handler in logging.root.handlers[:]:
                 logging.root.removeHandler(handler)
             return result  
